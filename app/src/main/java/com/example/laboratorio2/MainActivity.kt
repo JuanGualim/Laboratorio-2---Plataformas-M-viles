@@ -46,37 +46,41 @@ fun Mensajes(){
     val context = LocalContext.current
 
     Scaffold { innerPadding ->
-        Column  (
+        androidx.compose.foundation.layout.Box(
             modifier = Modifier
                 .fillMaxSize()
                 .background(Color(0xFFB2DFDB))
                 .padding(innerPadding)
-                .padding(16.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            Text(
-                text = "Juan Gabriel Gualim Molina",
-                style = MaterialTheme.typography.headlineMedium,
-                fontFamily = FontFamily.Cursive
-            )
+        ) {
+            Column(
+                modifier = Modifier.align(Alignment.Center),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = "Juan Gabriel Gualim Molina",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontFamily = FontFamily.Cursive
+                )
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Text(
-                text = "¡Bienvenido al Programa!",
-                fontSize = 18.sp,
-                fontFamily = FontFamily.Serif
-            )
+                Text(
+                    text = "¡Bienvenido al Programa!",
+                    fontSize = 18.sp,
+                    fontFamily = FontFamily.Serif
+                )
 
-            Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(16.dp))
 
-            MyImage()
-            Spacer(modifier = Modifier.height(16.dp))
+                MyImage()
+                Spacer(modifier = Modifier.height(16.dp))
 
-            Button(onClick = {
-                Toast.makeText(context, "Haz hecho click en el boton.", Toast.LENGTH_SHORT).show()
-            }) {
-                Text("Haz clic aquí")
+                Button(onClick = {
+                    Toast.makeText(context, "Haz hecho click en el boton.", Toast.LENGTH_SHORT)
+                        .show()
+                }) {
+                    Text("Haz clic aquí")
+                }
             }
         }
     }
