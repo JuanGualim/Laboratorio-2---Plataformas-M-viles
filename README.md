@@ -1,1 +1,1 @@
-# Laboratorio-2---Plataformas-M-viles
+# Laboratorio-2 - Plataformas-Móviles
